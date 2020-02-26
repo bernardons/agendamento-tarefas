@@ -1,0 +1,15 @@
+br/com/ciandt/desafio/dto/PessoaDTO.class
+br/com/ciandt/desafio/exception/AppExceptionHandler.class
+br/com/ciandt/desafio/AgendamentoTarefasApplication.class
+br/com/ciandt/desafio/rest/TarefaRestController.class
+br/com/ciandt/desafio/SwaggerConfig.class
+br/com/ciandt/desafio/enums/StatusExecucao.class
+br/com/ciandt/desafio/repository/TarefaRepository.class
+br/com/ciandt/desafio/service/TarefaService.class
+br/com/ciandt/desafio/batch/TarefaBatchConfig.class
+br/com/ciandt/desafio/service/TarefaSchedule.class
+br/com/ciandt/desafio/exception/ErrorResponse.class
+br/com/ciandt/desafio/AgendamentoTarefasConfig.class
+br/com/ciandt/desafio/batch/JobCompletionNotificationListener.class
+br/com/ciandt/desafio/model/Tarefa.class
+br/com/ciandt/desafio/exception/AgendamentoTarefaException.class

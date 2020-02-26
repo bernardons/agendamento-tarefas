@@ -1,0 +1,86 @@
+
+
+      <div class="container">
+          <div class="table-wrapper">
+              <div class="table-title">
+                  <div class="row">
+                      <div class="col-sm-6">
+  						<h2>Agendamento de <b>Tarefas</b></h2>
+  					</div>
+  					<div class="col-sm-6">
+  						<a href="#addTarefaModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Incluir Nova Tarefa</span></a>
+
+  					</div>
+                  </div>
+              </div>
+              <table class="table table-striped table-hover">
+                  <thead>
+                      <tr>
+  						<th>
+
+  						</th>
+                          <th>Agenda (Cron)</th>
+                          <th>Tabela de Origem</th>
+                          <th>Tabela de Destino</th>
+                          <th>Data da última execução</th>
+                          <th>Status da execução</th>
+                          <th>Ação</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr ng-repeat="tarefa in tarefas">
+              						<td/>
+                          <td>{{tarefa.agendamento}}</td>
+                          <td>{{tarefa.tabelaOrigem}}</td>
+                          <td>{{tarefa.tabelaDestino}}</td>
+  						            <td>{{tarefa.dataUltimaExecucao}}</td>
+                          <td>{{tarefa.status}}</td>
+                          <td>
+                              <a href="#" class="delete" ng-click="executarTarefa(tarefa.id)"><i class="material-icons" data-toggle="tooltip" title="Executar Tarefa Imediatamente">&#xe028;</i></a>
+                          </td>
+                      </tr>
+
+                  </tbody>
+              </table>
+
+          </div>
+      </div>
+  	<!-- Edit Modal HTML -->
+  	<div id="addTarefaModal" class="modal fade">
+  		<div class="modal-dialog">
+  			<div class="modal-content">
+  				<form novalidate>
+  					<div class="modal-header">
+  						<h4 class="modal-title">Inclusão de Tarefa</h4>
+  						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  					</div>
+            <div class="alert alert-danger" ng-repeat="alert in details">
+              <strong>Error!&nbsp;</strong>{{alert}}
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+          </div>
+
+  					<div class="modal-body">
+
+  						<div class="form-group">
+  							<label>Tabela Origem</label>
+                <select ng-options="tabela for tabela in tabelas" class="form-control"   ng-model="tarefa.tabelaOrigem"></select>
+
+  						</div>
+  						<div class="form-group">
+  							<label>Tabela Destino</label>
+                  <select ng-options="tabela for tabela in tabelas" class="form-control"  ng-model="tarefa.tabelaDestino"></select>
+
+  						</div>
+  						<div class="form-group">
+  							<label>Agendamento (Cron)</label>
+  							<input type="text" class="form-control" ng-model="tarefa.agendamento" placeholder="* * * * * *" required>
+  						</div>
+  					</div>
+  					<div class="modal-footer">
+  						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+  						<input type="submit" class="btn btn-success" value="Salvar" ng-click="salvar()">
+  					</div>
+  				</form>
+  			</div>
+  		</div>
+  	</div>

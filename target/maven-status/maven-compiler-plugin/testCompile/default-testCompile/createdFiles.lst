@@ -1,0 +1,5 @@
+br/com/ciandt/desafio/rest/TarefaRestControllerTest.class
+br/com/ciandt/desafioexceptions/ExceptionTest.class
+br/com/ciandt/desafio/model/TarefaTest.class
+br/com/ciandt/desafio/AgendamentoTarefasApplicationTests.class
+br/com/ciandt/desafioexceptions/ErrorResponseTest.class
